@@ -233,7 +233,7 @@ Runtime errors will occur within the runtime, do not throw up an error page, and
 
 ### Response Stream Disconnected
 
-A `responseStreamDisconnected` event `outcome` occurs when one end of the connection hangs up during the deferred proxying stage of a Worker request flow. This is regarded as an error for request metrics, and presents in logs as a non-error log entry. Commonly appears for longer lived connections such as websockets.
+A `responseStreamDisconnected` event `outcome` occurs when one end of the connection hangs up during the deferred proxying stage of a Worker request flow. This is regarded as an error for request metrics, and presents in logs as a non-error log entry. It commonly appears for longer lived connections such as WebSockets.
 
 ## Identify errors: Workers Metrics
 
