@@ -231,10 +231,6 @@ Runtime errors will occur within the runtime, do not throw up an error page, and
 | `Memory limit`<br/>`would be exceeded`<br/> `before EOF` | Trying to read a stream or buffer that would take you over the [memory limit](/workers/platform/limits/#memory). |
 | `daemonDown`                                             | A temporary problem invoking the Worker.                                                                         |
 
-### Response Stream Disconnected
-
-A `responseStreamDisconnected` event `outcome` occurs when one end of the connection hangs up during the deferred proxying stage of a Worker request flow. This is regarded as an error for request metrics, and presents in logs as a non-error log entry. It commonly appears for longer lived connections such as WebSockets.
-
 ## Identify errors: Workers Metrics
 
 To review whether your application is experiencing any downtime or returning any errors:
@@ -242,6 +238,8 @@ To review whether your application is experiencing any downtime or returning any
 1. Log in to the [Cloudflare dashboard](https://dash.cloudflare.com) and select your account.
 2. In **Account Home**, select **Workers & Pages**.
 3. In **Overview**, select your Worker and review your Worker's metrics.
+
+A `responseStreamDisconnected` event `outcome` occurs when one end of the connection hangs up during the deferred proxying stage of a Worker request flow. This is regarded as an error for request metrics, and presents in logs as a non-error log entry. It commonly appears for longer lived connections such as WebSockets.
 
 ## Debug exceptions
 
